@@ -13,6 +13,11 @@ class InformationalViewController: UITableViewController {
     private let jsonInformation = "https://catfact.ninja/facts?limit=5"
     
     private var information: Cat?
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        displayOfInformation()
+//    }
 
     // MARK: - Table view data source
 
@@ -25,6 +30,7 @@ class InformationalViewController: UITableViewController {
         
         let info = information?.data?[indexPath.row]
         cell.informationLabel.text = info?.fact
+        
         return cell
     }
    
@@ -37,6 +43,9 @@ class InformationalViewController: UITableViewController {
             
             do {
                 self.information = try JSONDecoder().decode(Cat.self, from: data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             } catch let error {
                 print(error)
             }

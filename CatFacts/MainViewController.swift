@@ -34,7 +34,7 @@ class MainViewController: UICollectionViewController {
         
         let userAction = labelName[indexPath.item]
         if userAction == labelName.first {
-            performSegue(withIdentifier: "InformationTransition", sender: nil)
+        performSegue(withIdentifier: "InformationTransition", sender: nil)
         }
     }
    
