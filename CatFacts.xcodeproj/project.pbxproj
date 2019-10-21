@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE8203E4235C608B00A90E5E /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8203E3235C608B00A90E5E /* InformationCell.swift */; };
 		BE8203E8235C680800A90E5E /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8203E7235C680800A90E5E /* Cat.swift */; };
 		BEE07EA82359D65300CB4B5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE07EA72359D65300CB4B5D /* AppDelegate.swift */; };
 		BEE07EAA2359D65300CB4B5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE07EA92359D65300CB4B5D /* SceneDelegate.swift */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE8203E3235C608B00A90E5E /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		BE8203E7235C680800A90E5E /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		BEE07EA42359D65300CB4B5D /* CatFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE07EA72359D65300CB4B5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				BEE07EA92359D65300CB4B5D /* SceneDelegate.swift */,
 				BEE07EBD2359E71500CB4B5D /* InformationalViewController.swift */,
 				BEE07EBB2359E4D700CB4B5D /* MainViewController.swift */,
-				BE8203E3235C608B00A90E5E /* InformationCell.swift */,
 				BEE07EBF2359FA8400CB4B5D /* UserActionCell.swift */,
 				BE8203E7235C680800A90E5E /* Cat.swift */,
 				BEE07EAD2359D65300CB4B5D /* Main.storyboard */,
@@ -150,7 +147,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE8203E4235C608B00A90E5E /* InformationCell.swift in Sources */,
 				BE8203E8235C680800A90E5E /* Cat.swift in Sources */,
 				BEE07EC02359FA8400CB4B5D /* UserActionCell.swift in Sources */,
 				BEE07EBC2359E4D700CB4B5D /* MainViewController.swift in Sources */,

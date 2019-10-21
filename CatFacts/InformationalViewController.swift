@@ -10,14 +10,9 @@ import UIKit
 
 class InformationalViewController: UITableViewController {
     
-    private let jsonInformation = "https://catfact.ninja/facts?limit=5"
+    private let jsonInformation = "https://catfact.ninja/facts?limit=25"
     
     private var information: Cat?
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        displayOfInformation()
-//    }
 
     // MARK: - Table view data source
 
@@ -26,12 +21,21 @@ class InformationalViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CatCell", for: indexPath) as! InformationCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CatCell", for: indexPath)
         
         let info = information?.data?[indexPath.row]
-        cell.informationLabel.text = info?.fact
+        cell.textLabel?.text = info?.fact
+        cell.imageView?.image = UIImage(named: "Co" )
+        cell.textLabel?.numberOfLines = 0
         
         return cell
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        135
+        return UITableView.automaticDimension
     }
    
     func displayOfInformation() {

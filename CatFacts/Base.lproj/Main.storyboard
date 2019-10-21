@@ -21,6 +21,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" id="85m-vQ-Iys">
+                            <rect key="frame" x="0.0" y="-44" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="v0V-zz-DuV" customClass="UserActionCell" customModule="CatFacts" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="50" width="300" height="86"/>
@@ -30,13 +34,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQb-Jh-HRl">
-                                            <rect key="frame" x="116.5" y="26.5" width="67" height="33"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                            <rect key="frame" x="115.5" y="26.5" width="69.5" height="33"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.66995140433355771" green="0.84382927297791011" blue="0.84850472910202823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.89475476840000001" green="0.86455148569999996" blue="0.80167845260000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstItem="nQb-Jh-HRl" firstAttribute="centerY" secondItem="0T7-B0-rWT" secondAttribute="centerY" id="HUP-sN-ypj"/>
                                         <constraint firstItem="nQb-Jh-HRl" firstAttribute="centerX" secondItem="0T7-B0-rWT" secondAttribute="centerX" id="wZ7-ub-1aj"/>
@@ -45,7 +49,7 @@
                                 <size key="customSize" width="300" height="86"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="6"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -74,32 +78,25 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gy1-c3-Hoc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.96613397940000001" green="0.88810188980000004" blue="0.69754514759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatCell" rowHeight="146" id="Kai-6I-7a0" customClass="InformationCell" customModule="CatFacts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="146"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatCell" textLabel="5ZT-6h-pJP" rowHeight="149" style="IBUITableViewCellStyleDefault" id="Kai-6I-7a0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kai-6I-7a0" id="FaC-zC-0Gg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cff-13-OWI">
-                                            <rect key="frame" x="40" y="22" width="295" height="124"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ZT-6h-pJP">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="cff-13-OWI" firstAttribute="centerX" secondItem="FaC-zC-0Gg" secondAttribute="centerX" id="UXw-lh-vsN"/>
-                                        <constraint firstItem="cff-13-OWI" firstAttribute="top" secondItem="FaC-zC-0Gg" secondAttribute="topMargin" constant="11" id="XaJ-gU-19y"/>
-                                        <constraint firstItem="cff-13-OWI" firstAttribute="leading" secondItem="FaC-zC-0Gg" secondAttribute="leadingMargin" constant="24" id="x5M-VE-iU6"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="cff-13-OWI" secondAttribute="bottom" constant="-11" id="zRD-bV-puZ"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="informationLabel" destination="cff-13-OWI" id="uyn-aO-gn4"/>
-                                </connections>
+                                <color key="backgroundColor" red="0.96613397942576806" green="0.88810188975191273" blue="0.6975451476108" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -111,7 +108,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHy-Ma-FwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="132"/>
+            <point key="canvasLocation" x="1704.8" y="131.78410794602701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j5Q-MH-QMc">
@@ -132,4 +129,7 @@
             <point key="canvasLocation" x="156" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat" width="493" height="700"/>
+    </resources>
 </document>
