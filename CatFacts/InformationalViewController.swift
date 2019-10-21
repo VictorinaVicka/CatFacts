@@ -25,8 +25,7 @@ class InformationalViewController: UITableViewController {
         
         let info = information?.data?[indexPath.row]
         cell.textLabel?.text = info?.fact
-        cell.imageView?.image = UIImage(named: "Co" )
-        cell.textLabel?.numberOfLines = 0
+        cell.imageView?.image = UIImage(named: "Catt" )
         
         return cell
     }
@@ -34,7 +33,6 @@ class InformationalViewController: UITableViewController {
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        135
         return UITableView.automaticDimension
     }
    
