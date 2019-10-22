@@ -10,11 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window?.tintColor = .black
+        UINavigationBar.appearance().tintColor = .black
         UINavigationBar.appearance().barTintColor = .init(cgColor: #colorLiteral(red: 0.9012817144, green: 0.8633093834, blue: 0.7943690419, alpha: 1).cgColor )
         
         return true

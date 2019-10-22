@@ -11,18 +11,18 @@ import UIKit
 
 class MainViewController: UICollectionViewController {
 
-    private let labelName = ["Facts about cats🐱"]
+    private let labelNames = ["Facts about cats🐱"]
 
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return labelName.count
+        return labelNames.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! UserActionCell
         
-        cell.userLabel.text = labelName[indexPath.row]
+        cell.userLabel.text = labelNames[indexPath.row]
     
         return cell
     }
@@ -31,9 +31,9 @@ class MainViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let userAction = labelName[indexPath.item]
-        if userAction == labelName.first {
-        performSegue(withIdentifier: "InformationTransition", sender: nil)
+        let userAction = labelNames[indexPath.item]
+        if userAction == labelNames.first {
+            performSegue(withIdentifier: "InformationTransition", sender: nil)
         }
     }
    
@@ -42,7 +42,7 @@ class MainViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "InformationTransition" {
             let informationalVC = segue.destination as! InformationalViewController
-            informationalVC.displayOfInformation()
+            informationalVC.fetchData()
         }
     }
 }

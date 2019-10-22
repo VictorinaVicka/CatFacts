@@ -36,7 +36,7 @@ class InformationalViewController: UITableViewController {
         return UITableView.automaticDimension
     }
    
-    func displayOfInformation() {
+    func fetchData() {
         guard let info = URL(string: jsonInformation) else { return }
         
         URLSession.shared.dataTask(with: info) { (data, _, _) in
