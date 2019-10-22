@@ -13,6 +13,14 @@ class InformationalViewController: UITableViewController {
     private let jsonInformation = "https://catfact.ninja/facts?limit=25"
     
     private var information: Cat?
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+    }
 
     // MARK: - Table view data source
 
@@ -47,6 +55,7 @@ class InformationalViewController: UITableViewController {
                 self.information = try JSONDecoder().decode(Cat.self, from: data)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    self.activityIndicator.stopAnimating()
                 }
             } catch let error {
                 print(error)
