@@ -42,7 +42,7 @@ class MainViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "InformationTransition" {
             let informationalVC = segue.destination as! InformationalViewController
-            informationalVC.fetchData()
+            informationalVC.fetchDataWithAlamofire()
         }
     }
 }

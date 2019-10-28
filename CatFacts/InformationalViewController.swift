@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class InformationalViewController: UITableViewController {
     
@@ -33,6 +34,7 @@ class InformationalViewController: UITableViewController {
         
         let info = information?.data?[indexPath.row]
         cell.textLabel?.text = info?.fact
+        cell.selectionStyle = .none
         cell.imageView?.image = UIImage(named: "Catt" )
         
         return cell
@@ -44,22 +46,21 @@ class InformationalViewController: UITableViewController {
         return UITableView.automaticDimension
     }
    
-    func fetchData() {
+    func fetchDataWithAlamofire() {
         guard let info = URL(string: jsonInformation) else { return }
         
-        URLSession.shared.dataTask(with: info) { (data, _, _) in
+        request(info).validate().responseJSON { dataResponse in
             
-            guard let data = data else { return }
-            
-            do {
-                self.information = try JSONDecoder().decode(Cat.self, from: data)
+            switch dataResponse.result {
+            case .success(let value):
+                self.information = Cat.getCat(from: value)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.activityIndicator.stopAnimating()
                 }
-            } catch let error {
+            case .failure(let error):
                 print(error)
             }
-        }.resume()
+        }
     }
 }
