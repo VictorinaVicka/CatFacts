@@ -13,7 +13,7 @@ class InformationalViewController: UITableViewController {
     
     private let jsonInformation = "https://catfact.ninja/facts?limit=25"
     
-    private var information: Cat?
+    private var information: [Information] = []
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
@@ -26,14 +26,14 @@ class InformationalViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        information?.data?.count ?? 0
+        information.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CatCell", for: indexPath)
         
-        let info = information?.data?[indexPath.row]
-        cell.textLabel?.text = info?.fact
+        let info = information[indexPath.row]
+        cell.textLabel?.text = info.fact
         cell.selectionStyle = .none
         cell.imageView?.image = UIImage(named: "Catt" )
         
@@ -53,7 +53,7 @@ class InformationalViewController: UITableViewController {
             
             switch dataResponse.result {
             case .success(let value):
-                self.information = Cat.getCat(from: value)
+                self.information = Information.getCat(from: value)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.activityIndicator.stopAnimating()

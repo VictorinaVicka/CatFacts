@@ -8,28 +8,21 @@
 
 struct Information: Decodable {
     let fact: String?
-}
-
-struct Cat: Decodable {
-    let data: [Information]?
     
     init(dict: [String : Any]) {
-        let dataCat = dict["data"] as? [String : String]
-        let dataValue = Information(fact: dataCat?["fact"])
-        
-        let data = dataValue
-        
-        self.data = [data]
+        fact = dict["fact"] as? String
     }
     
-    static func getCat(from value: Any) -> Cat? {
-        guard let jsonData = value as? ([String: Any]) else { return nil}
-        var cat: Cat?
+    static func getCat(from value: Any) -> [Information] {
+        guard let jsonData = value as? [String: Any] else { return [] }
+        guard let data = jsonData["data"] as? Array<[String: Any]> else { return [] }
         
-        for (other,fact) in jsonData {
-            let catInfo = Cat(dict: [other:fact])
-            cat = catInfo
+        var information: [Information] = []
+        
+        for dict in data {
+            let catInfo = Information(dict: dict)
+            information.append(catInfo)
         }
-        return cat
+        return information
     }
 }
