@@ -57,6 +57,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BE33C33E23A4E58E001BAB75 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				BEE07EA72359D65300CB4B5D /* AppDelegate.swift */,
+				BEE07EA92359D65300CB4B5D /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		BE33C33F23A4E5B2001BAB75 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE33C34023A4E5D5001BAB75 /* Cell */,
+				BEE07EBD2359E71500CB4B5D /* InformationalViewController.swift */,
+				BEE07EBB2359E4D700CB4B5D /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BE33C34023A4E5D5001BAB75 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BEE07EBF2359FA8400CB4B5D /* UserActionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BE33C34123A4E5E6001BAB75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE8203E7235C680800A90E5E /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE33C34223A4E5F4001BAB75 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BEE07EAD2359D65300CB4B5D /* Main.storyboard */,
+				BEE07EB22359D65400CB4B5D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		BEE07E9B2359D65300CB4B5D = {
 			isa = PBXGroup;
 			children = (
@@ -78,15 +122,11 @@
 		BEE07EA62359D65300CB4B5D /* CatFacts */ = {
 			isa = PBXGroup;
 			children = (
-				BEE07EA72359D65300CB4B5D /* AppDelegate.swift */,
-				BEE07EA92359D65300CB4B5D /* SceneDelegate.swift */,
-				BEE07EBD2359E71500CB4B5D /* InformationalViewController.swift */,
-				BEE07EBB2359E4D700CB4B5D /* MainViewController.swift */,
-				BEE07EBF2359FA8400CB4B5D /* UserActionCell.swift */,
-				BE8203E7235C680800A90E5E /* Model.swift */,
-				BEE07EAD2359D65300CB4B5D /* Main.storyboard */,
+				BE33C33E23A4E58E001BAB75 /* Supports */,
+				BE33C33F23A4E5B2001BAB75 /* ViewControllers */,
+				BE33C34123A4E5E6001BAB75 /* Model */,
+				BE33C34223A4E5F4001BAB75 /* Storyboards */,
 				BEE07EB02359D65400CB4B5D /* Assets.xcassets */,
-				BEE07EB22359D65400CB4B5D /* LaunchScreen.storyboard */,
 				BEE07EB52359D65400CB4B5D /* Info.plist */,
 			);
 			path = CatFacts;
