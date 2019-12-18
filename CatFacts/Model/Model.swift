@@ -19,8 +19,8 @@ struct Information: Decodable {
         
         var information: [Information] = []
         
-        for dict in data {
-            let catInfo = Information(dict: dict)
+        for dataFetch in data {
+            let catInfo = Information(dict: dataFetch)
             information.append(catInfo)
         }
         return information
